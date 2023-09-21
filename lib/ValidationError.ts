@@ -6,7 +6,7 @@ import { isNonEmptyArray } from './utils/NonEmptyArray';
 const MAX_ISSUES_IN_MESSAGE = 99; // I've got 99 problems but the b$tch ain't one
 const ISSUE_SEPARATOR = '; ';
 const UNION_SEPARATOR = ', or ';
-const PREFIX = 'Validation error';
+const PREFIX = 'Errore di validazione';
 const PREFIX_SEPARATOR = ': ';
 
 export type ZodError = zod.ZodError;
@@ -56,11 +56,11 @@ function getMessageFromZodIssue(
       const identifier = issue.path[0];
 
       if (typeof identifier === 'number') {
-        return `${issue.message} at index ${identifier}`;
+        return `${issue.message} in posizione ${identifier}`;
       }
     }
 
-    return `${issue.message} at "${joinPath(issue.path)}"`;
+    return `${issue.message} in "${joinPath(issue.path)}"`;
   }
 
   return issue.message;
