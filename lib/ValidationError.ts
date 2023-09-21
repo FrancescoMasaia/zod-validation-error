@@ -1,4 +1,4 @@
-import * as zod from 'zod';
+import * as zod from '@colibryx/zod';
 
 import { joinPath } from './utils/joinPath';
 import { isNonEmptyArray } from './utils/NonEmptyArray';

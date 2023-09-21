@@ -79,9 +79,9 @@
     "rimraf": "^5.0.1",
     "ts-jest": "^29.0.3",
     "typescript": "^5.1.6",
-    "zod": "^3.20.0"
+    "@colibryx/zod": "^3.22.4"
   },
   "peerDependencies": {
-    "zod": "^3.18.0"
+    "@colibryx/zod": "^3.22.4"
   }
 }
